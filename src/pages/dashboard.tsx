@@ -37,7 +37,7 @@ function Dashboard(props: Props): JSX.Element {
       },
       {
         label: t("DashboardBreadcrumb"),
-        path: "/",
+        path: "/kpis",
       },
     ];
     setBreadcrumbs(breadcrumbsData);

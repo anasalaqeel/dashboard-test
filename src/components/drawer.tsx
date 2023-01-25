@@ -9,7 +9,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import colors from "../constants/colors";
 import DashboardIcon from "@mui/icons-material/Dashboard";
-import { useNavigate } from "react-router-dom";
+import AddBoxIcon from "@mui/icons-material/AddBox";
 
 interface Props {
   open?: any;
@@ -17,10 +17,8 @@ interface Props {
 }
 
 function AppDrawer({ open, onClose }: Props): JSX.Element {
-  const navigate = useNavigate();
-
-  function handleNavigate() {
-    window.location.href = "/";
+  function handleNavigate(path: string): void {
+    window.location.href = path;
   }
 
   return (
@@ -31,11 +29,21 @@ function AppDrawer({ open, onClose }: Props): JSX.Element {
         </div>
         <List>
           <ListItem disablePadding>
-            <ListItemButton onClick={handleNavigate}>
+            <ListItemButton onClick={() => handleNavigate("/")}>
               <ListItemIcon>
                 <DashboardIcon />
               </ListItemIcon>
               <ListItemText primary="Dashboard" />
+            </ListItemButton>
+          </ListItem>
+        </List>
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton onClick={() => handleNavigate("/addkpis")}>
+              <ListItemIcon>
+                <AddBoxIcon />
+              </ListItemIcon>
+              <ListItemText primary="Add new KPI" />
             </ListItemButton>
           </ListItem>
         </List>

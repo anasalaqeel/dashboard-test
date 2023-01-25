@@ -1,7 +1,7 @@
 interface colorsTypes {
   readonly primary: "#0f9df3";
   readonly secondary: "#e2f6ff";
-  readonly mainFont: "#707070";
+  readonly mainFont: "#484848";
   readonly divider: "#00000005";
   readonly success: "#28a745";
   readonly warning: "#ff3f3f";
@@ -14,7 +14,7 @@ interface colorsTypes {
 const colors: colorsTypes = {
   primary: "#0f9df3",
   secondary: "#e2f6ff",
-  mainFont: "#707070",
+  mainFont: "#484848",
   divider: "#00000005",
   success: "#28a745",
   warning: "#ff3f3f",
